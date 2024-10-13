@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Freight;
+    }
+    
+    html, body {
+    width: 100%;
+    height: 100%;
+    }
+   
+   
+   
+    #loader{
+       height: 100vh;
+       width: 100%;
+       background-color: black;
+       position: fixed;
+       z-index: 99;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* display: none; */
+    }
+   
+   
+   #loader h1{
+       font-family: Freight;
+       font-weight: 100;
+       font-size: 6vw;
+       text-align: center;
+       position: relative;
+       z-index: 9;
+       text-transform: uppercase;
+       line-height: 0.8;
+       color: #fff;
+   }
+   #loader h1 span{
+       font-family: Freight;
+       font-style: italic;
+       font-weight: 100;
+       color: #fff;
+   }
+   
+   #loader video{
+       height: 100vh;
+       width: 100%;
+       position: absolute;
+       object-fit: cover;
+       z-index: 6;
+   }
+   #overlay-blue1{
+       height: 100vh;
+       width: 100%;
+       background-color: #ECF9FF;
+       position: absolute;
+       z-index: 8;
+      
+    }
+    #overlay-blue2{
+       height: 100vh;
+       width: 100%;
+       background-color: #ECF9FF;
+       position: absolute;
+       z-index: 7;
+      
+    }
+    #nav {
+       position: absolute;
+       padding: 20px 40px;
+       
+    }
+   
+    #nav img{
+       position: absolute;
+       height: 100px;
+       width: 100px;
+       z-index: 10;
+       /* padding: 30px 40px; */
+    }
+   
+   
+    #page1{
+       height: 100vh;
+       width: 100%;
+       background-color: #ECF9FF;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+   
+   #page1 h1{
+       font-family: Freight;
+       font-weight: 100;
+       font-size: 6vw;
+       text-align: center;
+       text-transform: uppercase;
+       line-height: 0.8;
+   }
+   #page1 h1 span{
+       font-family: Freight;
+       font-style: italic;
+       font-weight: 100;
+   }
+   
+   
+   
+   
+   
+   
+    #page2{
+       height: 100vh;
+       width: 100%;
+       background-color:#b1e6ff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       flex-direction: column;
+       background-size: cover;
+       background-position: center;
+    }
+   
+    .elem{
+       /* background-color: red; */
+       width: 100%;
+       position: relative;
+       cursor: pointer;
+    }
+   
+    .elem h2{
+       font-size: 8vw;
+       text-decoration: none;
+       text-transform: uppercase;
+       color: white;
+       font-family: Freight;
+       font-weight: 100;
+       position: relative;
+       z-index: 9;
+       line-height: 6vw;
+       /* transition: all ease 1s; */
+       /* cursor: pointer; */
+    }
+
+    .elem h2 a{
+    
+      text-decoration: none;
+      color: white;
+   } 
+  
+   
+    .elem .moving{
+      background-color: rgba(0, 0, 0, 0.502);
+      width: 100%;
+      white-space: nowrap;
+      padding: 5px 0px;
+      position: absolute;
+      top: 50%;
+      transition: all ease 0.5s;
+      transform: translate(0, -45%) scaleY(0);
+      overflow: hidden;
+      /* opacity: 0; */
+  
+    }
+   
+    .elem .moving .moving-in{
+       /* background-color: seagreen; */
+       white-space: nowrap;
+       display: inline-block;
+       animation-name: moving-animation;
+       animation-timing-function: linear;
+       animation-duration: 10s;
+       animation-iteration-count: infinite;
+   
+     
+    }
+   
+    .elem .moving .moving-in h5{
+       color: white;
+       display: inline-block;
+       font-size: 1em;
+       text-transform: uppercase;
+       margin-left: 30px;
+    }
+   
+    @keyframes moving-animation{
+       from{
+           transform: translateX(0);
+       }
+       to{
+           transform: translateX(-100%);
+       }
+    }
+   
+    .elem:hover .moving{
+       /* opacity: 1; */
+       transform: translate(0, -45%) scaleY(1);
+   
+    }
+    
+    .elem:hover h2{ 
+       /* opacity: 1; */
+       font-style: italic;
+   
+    }
+   
+    .elem .blur{
+      position: absolute;
+      width: 30%;
+      background: linear-gradient(to right, #00000082, #000000, #00000093);
+      box-shadow: 10px 0px 20px #000000 -10px 0px 20px #000000 ;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      z-index: 8;
+  
+  
+   }
+   #page3{
+       min-height: 100vh;
+       width: 100%;
+       background-color: #ECF9FF;
+    }
+   
+    .image-container{
+       padding: 30px;
+       display: flex;
+       align-items: flex-start;
+       flex-wrap: wrap;
+       
+       
+    }
+   
+    .image-div{
+       height: 30vw;
+       width: 20vw;
+       /* background-color: red;  */
+       position: relative;
+       overflow: hidden;
+       margin: 10px 86px;
+      
+       /* transition: all ease 0.5s; */
+    }
+   
+    .image-div img{
+       height: 100%;
+       width: 100%;
+       object-fit: cover;
+       transition: all ease 0.5s;
+    }
+   
+    .overlay{
+       height: 100%;
+       width: 100%;
+       background-color: #00000015;
+       position: absolute;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all ease 0.5s;
+       z-index: 9;
+   
+    }
+   
+    .overlay p{
+       font-size: 2.8em;
+       text-transform: uppercase;
+       text-align: center;
+       color: #fff;
+       line-height: 2.5vw;
+       opacity: 0;
+       transition: all ease 0.5s;
+    }
+   
+    .image-div:hover .overlay{
+       background-color: #000;
+    }
+   
+    .image-div:hover .overlay p{
+       opacity: 1;
+    }
+   
+    .image-div:hover img{
+       scale: 1.2;
+    }
+   
+    #footer{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* background-color: red; */
+       /* margin-top: 20px; */
+       /* height: 100px; */
+   
+       
+    }
+   
+    #footer h1{
+       font-size: 1em;
+       text-transform: uppercase;
+       cursor: pointer;
+       /* transition: all ease 0.5s; */
+       /* text-align: center; */
+       /* padding: 20px 20px; */
+       /* padding-bottom: 50px; */
+      
+    }
+
+    #footer h1:hover{
+      text-decoration: line-through;
+      /* font-style: italic; */
+      transition: all ease 0.5s;
+    }
+   
+    #footer2{
+       height: 80px;
+       width: 100%;
+      margin-top: 20px;
+       background-color: rgba(0, 0, 0, 0.24);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+      
+       
+    }
+
+    #footer2 img{
+    height: 30px;
+    width: 30px;
+    margin: 1vw;
+    /* gap: 20px; */
+   }
+
+
+    @media(max-width: 1499px){
+      .image-container{
+         padding: 10vw;
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         
+         
+      }
+    }
+
+    @media(max-width: 500px){
+      .image-div{
+         height: 100vw;
+         width: 80vw;
+         background-color: red;
+         position: relative;
+         overflow: hidden;
+         margin: 30px;
+        
+         /* transition: all ease 0.5s; */
+      }
+
+      .overlay p{
+         font-size: 1.5em;
+         text-transform: uppercase;
+         text-align: center;
+         color: #fff;
+         line-height: 6vw;
+         opacity: 0;
+         transition: all ease 0.5s;
+      }
+
+      .elem .moving .moving-in h5{
+         color: white;
+         display: inline-block;
+         font-size: 1em;
+         text-transform: uppercase;
+         margin-left: 30px;
+      }
+
+      .elem .moving{
+         background-color: rgba(0, 0, 0, 0.502);
+         width: 100%;
+         white-space: nowrap;
+         padding: 5px 0px;
+         position: absolute;
+         top: 50%;
+         transition: all ease 0.5s;
+         transform: translate(0, -45%) scaleY(0);
+         overflow: hidden;
+         /* opacity: 0; */
+     
+      }
+     
+      
+    .elem h2{
+      font-size: 10vw;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      font-family: Freight;
+      font-weight: 100;
+      position: relative;
+      z-index: 9;
+      line-height: 10vw;
+      /* transition: all ease 1s; */
+      /* cursor: pointer; */
+   }
+
+   .elem h2 a{
+      text-decoration: none;
+      color: white;
+   }
+
+   .elem .blur{
+      position: absolute;
+      width: 40%;
+      background: linear-gradient(to right, #0000004a, #000000, #0000004a);
+      box-shadow: 10px 0px 20px #000000 -10px 0px 20px #000000;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      z-index: 8;
+  
+  
+   }
+
+   .elem h2{
+      font-size: 2em;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      font-family: Freight;
+      font-weight: 500;
+      position: relative;
+      z-index: 9;
+      line-height: 2em;
+      /* transition: all ease 1s; */
+      /* cursor: pointer; */
+   }
+
+    
+
+
+
+     
+    }
